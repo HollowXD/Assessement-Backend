@@ -16,6 +16,6 @@ module.exports = {
         let randomFortune = fortunes[randomIndex];
       
         res.status(200).send(randomFortune);
-    }
+    },
 
 }
