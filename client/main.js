@@ -49,14 +49,14 @@ function displayAdvice(arr) {
 }
 
 function createAdvice(advice, id) {
-    const adviceContainer = document.createElement("div")
-    adviceContainer.classList.add("advice")
+    const adviceContainer = document.createElement("div");
+    adviceContainer.classList.add("advice");
 }
 
 adviceContainer.innerHTML = `
 <p class="advice-title">${advice}</p>
-<div>
-    <input id='text-advice' type='text'/>
+<div class="btns-container">
+    <input id=text-advice-${id} type='text'/>
     <button onclick='updateAdvice(${id})'>Update</button>
 </div>
 `;
