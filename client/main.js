@@ -7,7 +7,8 @@ const inputForm = document.getElementById('input-form')
 const adviceContainer = document.getElementById('adviceContainer')
 
 const getCompliment = () => {
-    axios.get("http://localhost:4000/api/compliment/")
+    axios
+        .get("http://localhost:4000/api/compliment/")
         .then(res => {
             const data = res.data;
             alert(data);
@@ -15,7 +16,8 @@ const getCompliment = () => {
 };
 
 const getFortune = () => {
-    axios.get("http://localhost:4000/api/fortune/")
+    axios
+        .get("http://localhost:4000/api/fortune/")
         .then(res => {
             const data = res.data;
             alert(data);
