@@ -29,7 +29,6 @@ const adviceCallback = (res) => displayAdvice(res.data);
 const updateAdvice = (id, text) => {
     console.log({ id }, { text });
     const updateInput = document.querySelector(`#text-advice-${id}`).value;
-    console.log({ updateInput: updateInput });
     axios
         .put(`http://localhost:4000/api/advice/${id}`, { updateInput })
         .then(adviceCallback);
