@@ -31,8 +31,9 @@ module.exports = {
     },
 
     updateAdvice: (req, res) => {
-        const id = +req.params.id;
-        advice.splice(index, 1, req.b.text);
+        const index = +req.params.id;
+        const text = req.body.updateAdvice;
+        advice.splice(index, 1, text);
         res.status(200).send(advice);
     },
 }

@@ -26,14 +26,14 @@ const adviceCallback = (res) => displayAdvice(res.data);
 
 const updateAdvice = (id, text) => {
     console.log({ id }, { text });
-    axios.put(`http://localhost:4000/api/advice/${id}`, { text })
+    const updateInput = document.querySelector(`#text-advice-${id}`).value;
+    axios.put(`http://localhost:4000/api/advice/${id}`, { updateInput })
     .then(adviceCallback);
 }
 
 const postAdvice = (e) => {
     e.preventDefault();
     const text = inputText.value;
-    console.log(text);
 
     axios.post("http://localhost:4000/api/advice/", { text })
     .then(adviceCallback);
