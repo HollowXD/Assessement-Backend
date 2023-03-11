@@ -26,8 +26,13 @@ module.exports = {
 
     postAdvice: (req, res) => {
         const { text } = req.body;
-        console.log(text);
         advice.push(text);
+        res.status(200).send(advice);
+    },
+
+    updateAdvice: (req, res) => {
+        const id = +req.params.id;
+        advice.splice(index, 1, req.b.text);
         res.status(200).send(advice);
     },
 }
