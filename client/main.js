@@ -52,15 +52,17 @@ function displayAdvice(arr) {
 function createAdvice(advice, id) {
     const adviceContainer = document.createElement("div");
     adviceContainer.classList.add("advice");
-}
 
-adviceContainer.innerHTML = `
-<p class="advice-title">${advice}</p>
-<div class="btns-container">
+    adviceContainer.innerHTML = `
+    <p class="advice-title">${advice}</p>
+    <div class="btns-container">
     <input id=text-advice-${id} type='text'/>
     <button onclick='updateAdvice(${id})'>Update</button>
-</div>
-`;
+    </div>
+    `;
+
+    adviceContainer.appendChild(adviceContainer);
+}
 
 fortuneBtn.addEventListener('click', getFortune)
 complimentBtn.addEventListener('click', getCompliment)
