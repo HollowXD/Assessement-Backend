@@ -1,3 +1,9 @@
+let advice = [
+    "Stay on the task at hand.",
+    "Keep your head up.",
+    "Success doesn't come without trial."
+];
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -18,4 +24,10 @@ module.exports = {
         res.status(200).send(randomFortune);
     },
 
+    postAdvice: (req, res) => {
+        const { text } = req.body;
+        console.log(text);
+        advice.push(text);
+        res.status(200).send(advice);
+    },
 }
